@@ -1,9 +1,6 @@
 import requests
-
 url = "https://dummy.restapiexample.com/api/v1/employees"
-
 respuesta = requests.get(url)
-
 if respuesta.status_code == 200:
     datos = respuesta.json()
     lista_de_empleados = datos.get('data', [])
